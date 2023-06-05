@@ -1,2 +1,45 @@
-# efficient-development
-Rules to live by
+# Efficient Development
+Rules to live by. Written using GitLab, git, and Jira terminology, but generalizable to any software development tools.
+
+- Use [trunk based development](https://trunkbaseddevelopment.com/) and avoid multiple persistent branches
+- Integrate early and often (continuously)
+- Give everyone (even people outside your team) developer access and don't attempt to control what they do
+  - Just protect the main branch
+- Always make the change in the most-upstream repository
+- Prefer Merge Requests (MRs) over Jira tickets
+  - Jira tickets are useful as a promise to do some work in the future that we don't have time to do now
+    - Only if you actually promise to do that work
+  - Clear and comprehensive MR descriptions are far more important than individual commit messages
+    - Updating the MR description costs nothing, work on continuously improving it
+- If a Jira ticket exists, reference it in MR description to automatically link and close upon completion
+- Make your work visible
+  - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
+  - Commit and push frequently
+- Keep MRs small
+- Match existing code
+  - Unless that code is broken or terrible, in which case update it everywhere, not just in your new code
+- Drive MRs to closure before opening new ones
+  - Unless you find a bug that can be spun off and completed via a smaller incremental MR sooner
+- Resolve MR concerns efficiently
+  - Developers are empowered to resolve threads about typos when they make the fix
+  - Larger / open-ended / architectural concerns shall be resolved by the originator of the thread (only)
+  - Reviewers should prefer the [suggest changes](https://docs.gitlab.com/ee/user/project/merge_requests/reviews/suggestions.html) feature whenever possible to allow quicker application by the developer
+    - Or just push a commit that fixes that spelling mistake
+      - But don't push big changes without talking to the developer
+  - Once a reviewer approves, consider all threads they originated resolvable by anyone
+  - Reviewers should consider explicitly stating "feel free to resolve" or "I'd like to review the changes" to avoid confusion
+- Link liberally to other MRs and comment threads, those linkages will pay significant dividends later
+- Add all stakeholders as reviewers to all MRs, even if they aren't on the team that owns that repository
+- Automate everything that can be automated
+  - Unless that automation is fragile and will cost more to maintain than doing it manually
+- Establish coding standards early and automate enforcement
+- Checklists are useful, only for things that can't be automated
+- Don't build or rely on anything that you aren't willing or able to maintain
+  - You aren't able to maintain plain text documentation of source code ... autogenerate it instead
+  - You aren't able to maintain complex shell scripts
+  - You aren't able to maintain anything that doesn't have tests
+- Beware the normalization of pipeline failures: always keep the main branch healthy
+- Leverage third party tools (CMake) and third party documentation, don't write custom wrappers (build.sh)
+- Never duplicate code
+  - Unless it's more complex or fragile to rely on one copy
+- Never triplicate code
