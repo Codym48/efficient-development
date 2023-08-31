@@ -7,6 +7,9 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
   - Just protect the main branch
 - Always make the change in the most-upstream repository
 - Prefer Merge Requests (MRs) over Jira tickets
+  - MRs allow one click completion of the changeset if there's agreement
+  - MRs allow visible discussion of the changeset alongside the code to reach agreement
+  - MRs avoid the misinterpretation that often happens when playing telephone through email ➡ chat ➡ Jira ➡ git
   - Jira tickets are useful as a promise to do some work in the future that we don't have time to do now
     - Only if you actually promise to do that work
   - Clear and comprehensive MR descriptions are far more important than individual commit messages
