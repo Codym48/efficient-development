@@ -19,6 +19,7 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
   - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
   - Commit and push frequently
 - Keep MRs small
+- Keep branches short-lived and merge from main frequently
 - Match existing code
   - Unless that code is broken or terrible, in which case update it everywhere, not just in your new code
 - Drive MRs to closure before opening new ones
