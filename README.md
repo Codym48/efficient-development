@@ -47,4 +47,4 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
 - Leverage third party tools (CMake) and third party documentation, don't write custom wrappers (build.sh)
 - Never duplicate code
   - Unless it's more complex or fragile to rely on one copy
-- Never triplicate code
+- [Never triplicate code](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming))
