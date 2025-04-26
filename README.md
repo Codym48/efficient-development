@@ -15,7 +15,8 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
     - Only if you actually promise to do that work
   - Clear and comprehensive MR descriptions are far more important than individual commit messages
     - Updating the MR description costs nothing, work on continuously improving it
-- If a Jira ticket exists, reference it in MR description to automatically link and close upon completion
+    - [GIFs](https://gifcap.dev/) in MR descriptions are incredibly powerful persistent demos
+- If a Jira ticket exists, reference it in MR description to automatically link and optionally close upon completion
 - Make your work visible
   - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
   - Commit and push frequently
@@ -25,6 +26,8 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
   - Unless that code is broken or terrible, in which case update it everywhere, not just in your new code
 - Drive MRs to closure before opening new ones
   - Unless you find a bug that can be spun off and completed via a smaller incremental MR sooner
+- Make time to review teammates MRs on a recurring basis
+  - Like while waiting on review of your MR and after you finish it before you start the next one
 - Resolve MR concerns efficiently
   - Developers are empowered to resolve threads about typos when they make the fix
   - Larger / open-ended / architectural concerns shall be resolved by the originator of the thread (only)
@@ -38,12 +41,14 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
 - Automate everything that can be automated
   - Unless that automation is fragile and will cost more to maintain than doing it manually
 - Establish coding standards early and automate enforcement
+  - Don't spend any time arguing about coding standards that aren't automatically enforced
 - Checklists are useful, only for things that can't be automated
 - Don't build or rely on anything that you aren't willing or able to maintain
   - You aren't able to maintain plain text documentation of source code ... autogenerate it instead
   - You aren't able to maintain complex shell scripts
   - You aren't able to maintain anything that doesn't have tests
 - Beware the normalization of pipeline failures: always keep the main branch healthy
+  - Triaging and squashing flakes is higher priority than developing new features
 - Leverage third party tools (CMake) and third party documentation, don't write custom wrappers (build.sh)
 - Never duplicate code
   - Unless it's more complex or fragile to rely on one copy
