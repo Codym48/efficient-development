@@ -64,3 +64,30 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
   - one repo that submodules in 10+ others doesn't count as fewer repos
 - prefer fewer persistent branches (trunk based development)
 - prefer flatter directory structures
+
+# CI Pipeline Health
+[This excerpt from Software Engineering at Google describes the value of a CI pipeline](https://abseil.io/resources/swe-book/html/ch11.html)
+> tests derive their value from the trust engineers place in them. ... A bad test suite can be worse than no test suite at all.
+
+CI pipelines are most valuable when they distill the results of the test suite into a single, reliable pass (✅) or fail (❌) signal that is visible at a glance without inspecting any additional logs. This allows developers to instantly understand if the code under test is working as intended or has had a regression. To maximize the value of a CI pipeline, everyone working in the repository must agree on the definition of pass and fail and the expected developer response:
+- ✅ means all tests that we wanted to run that we expect to pass did run and did pass, the developer can take action without reviewing logs
+- ❌ means the unit under test failed some test that we expect to pass and requires developer action
+  - in main, sound the alarm, pause new feature development, and get main healthy, which could be by skipping a test or marking it as expected to fail while investigating root cause
+  - in a feature branch, don't merge until you make changes and get to ✅
+
+Efficient development requires that ❌ not mean something squishy like “well something new may be broken, or maybe just the things that are currently expected to be broken are broken and everything else is fine, please manually inspect the logs to determine the answer.”
+
+Efficient development does not accept persistent ❌ on the main branch, since that affects and sometimes blocks all ongoing development by providing an unstable baseline for comparison. It also normalizes ❌, which undermines the team’s panic reflex and delays detection of real problems.
+
+Efficient development minimizes the use of ⚠/❕/🟡 as an unclear middle ground between ✅ and ❌ that does not give the developer a clear signal of what to do next. Some teams or pipelines will define and use ⚠/❕/🟡; the process defined in this Wiki consciously avoids that complexity.
+
+A false pass is a ✅ that doesn't mean the above, for example because some tests that we wanted to run did not run due to an error in our pipeline or test infrastructure.
+
+A false failure is a ❌ that doesn't mean the above, for example because the CI infrastructure failed during setup without actually running the test suite, or because the only test that failed is currently expected to fail at some frequency. This can also be described as an "infrastructure failure" or a "flaky test."
+
+Note that [false failures and flaky tests are harmful](https://abseil.io/resources/swe-book/html/ch11.html#testing_at_google_scale) because they don't mean the unit under test failed in an unexpected way, so they waste developer time and, if not squashed, erode the team's trust in the pipeline. If developers click retry (🔄) without looking at the logs, the trust is gone and the pipeline is no longer adding value.
+> If you have a few thousand tests, each with a very tiny bit of nondeterminism, running all day, occasionally one will probably fail (flake).  As the number of tests grows, statistically so will the number of flakes. If each test has even a 0.1% of failing when it should not, and you run 10,000 tests per day, you will be investigating 10 flakes per day. Each investigation takes time away from something more productive that your team could be doing.
+
+Changes to pipeline definitions or the test suite itself require extra scrutiny and detailed log review because they can increase the false-pass or false-fail rate. A best practice when introducing a new test is to intentionally inject a failure in the unit under test and ensure that the pipeline catches it and reports ❌.
+
+Ensuring adherence to the above best practices and expected responses is everyone's responsibility, not just the Maintainer, Product Owner, Responsible Engineer, etc.. If you see something, say something.
