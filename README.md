@@ -15,14 +15,14 @@ Efficient development minimizes total pain and suffering across the whole softwa
   - MRs avoid the misinterpretation that often happens when playing telephone through email ➡ chat ➡ Jira ➡ git
   - Jira tickets are useful as a promise to do some work in the future that we don't have time to do now
     - Only if you actually promise to do that work
+- If a Jira ticket exists, reference it in the MR description to automatically link and optionally close upon completion
+- Make your work visible
+  - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
+  - Commit and push frequently
 - Clear and comprehensive MR descriptions are far more important than individual commit messages
   - Updating the MR description costs nothing, work on continuously improving it
   - Focus on [why (and why not), not how](https://cbea.ms/git-commit/#why-not-how), providing context and [theory](https://pablo.rauzy.name/dev/naur1985programming.pdf) that isn't already visible in the diff
   - [GIFs](https://gifcap.dev/) in MR descriptions are incredibly powerful persistent demos
-- If a Jira ticket exists, reference it in MR description to automatically link and optionally close upon completion
-- Make your work visible
-  - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
-  - Commit and push frequently
 - Do not publish or burden others with reading something generated that you haven't validated and synthesized
 - Keep MRs small
 - Keep branches short-lived and merge from main frequently
