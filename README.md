@@ -23,6 +23,7 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Make your work visible
   - Open draft MRs extremely early (even just a README update saying what you're going to go do) to allow early review and course correction
   - Commit and push frequently
+- Do not publish or burden others with reading something generated that you haven't validated and synthesized
 - Keep MRs small
 - Keep branches short-lived and merge from main frequently
 - Match existing code
