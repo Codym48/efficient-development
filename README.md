@@ -22,7 +22,6 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Clear and comprehensive MR descriptions are far more important than individual commit messages
   - Updating the MR description costs nothing, work on continuously improving it
   - Focus on [why (and why not), not how](https://cbea.ms/git-commit/#why-not-how), providing context and [theory](https://pablo.rauzy.name/dev/naur1985programming.pdf) that isn't already visible in the diff
-  - [GIFs](https://gifcap.dev/) in MR descriptions are incredibly powerful persistent demos
 - Do not publish or burden others with reading something generated that you haven't validated and synthesized yourself
 - Keep MRs small
 - Keep branches short-lived and merge from main frequently
@@ -31,7 +30,6 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Drive MRs to closure before opening new ones
   - Unless you find a bug that can be spun off and completed via a smaller incremental MR sooner
 - Make time to review teammates' MRs on a recurring basis
-  - Like while waiting on review of your MR and after you finish it before you start the next one
 - Resolve MR concerns efficiently
   - Developers are empowered to resolve threads about typos when they make the fix
   - Larger / open-ended / architectural concerns shall be resolved by the originator of the thread (only)
