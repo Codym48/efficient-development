@@ -23,7 +23,7 @@ Efficient development minimizes total pain and suffering across the whole softwa
   - Updating the MR description costs nothing, work on continuously improving it
   - Focus on [why (and why not), not how](https://cbea.ms/git-commit/#why-not-how), providing context and [theory](https://pablo.rauzy.name/dev/naur1985programming.pdf) that isn't already visible in the diff
   - [GIFs](https://gifcap.dev/) in MR descriptions are incredibly powerful persistent demos
-- Do not publish or burden others with reading something generated that you haven't validated and synthesized
+- Do not publish or burden others with reading something generated that you haven't validated and synthesized yourself
 - Keep MRs small
 - Keep branches short-lived and merge from main frequently
 - Match existing code
