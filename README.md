@@ -1,6 +1,8 @@
 # Efficient Development
 Rules to live by. Written using GitLab, git, and Jira terminology, but generalizable to any software development tools.
 
+Efficient development minimizes total pain and suffering across the whole software lifecycle. As such, the return on these behaviors grows as the use of the software grows, in number of use cases, number of users, number of developers and maintainers, number of interfaces to external code and teams, and number of months or years that we expect the software to exist and be relevant.
+
 - Use [trunk based development](https://trunkbaseddevelopment.com/) and avoid multiple persistent branches
 - Integrate early and often (continuously)
 - Give everyone (even people outside your team) developer access and don't attempt to control what they do
