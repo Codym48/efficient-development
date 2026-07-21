@@ -26,7 +26,7 @@ Rules to live by. Written using GitLab, git, and Jira terminology, but generaliz
   - Unless that code is broken or terrible, in which case update it everywhere, not just in your new code
 - Drive MRs to closure before opening new ones
   - Unless you find a bug that can be spun off and completed via a smaller incremental MR sooner
-- Make time to review teammates MRs on a recurring basis
+- Make time to review teammates' MRs on a recurring basis
   - Like while waiting on review of your MR and after you finish it before you start the next one
 - Resolve MR concerns efficiently
   - Developers are empowered to resolve threads about typos when they make the fix
