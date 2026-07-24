@@ -46,10 +46,11 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Establish coding standards early and automate enforcement
   - Don't spend any time arguing about coding standards that aren't automatically enforced
 - Checklists are useful, only for things that can't be automated
-- Don't promote or rely on anything that you aren't willing and able to maintain
-  - You aren't able to maintain plain text documentation of source code ... autogenerate it instead
-  - You aren't able to maintain complex shell scripts
-  - You aren't able to maintain anything that doesn't have tests
+- Create things that increase your efficiency, even if the use case is narrow and the lifespan is tiny
+  - But don't promote (expand use of) or rely on anything that you aren't willing and able to maintain
+    - You aren't able to maintain plain text documentation of source code ... autogenerate it instead
+    - You aren't able to maintain complex shell scripts
+    - You aren't able to maintain anything that doesn't have tests
 - Beware the normalization of pipeline failures: always keep the main branch healthy
   - Triaging and squashing flakes is higher priority than developing new features
 - Leverage third party tools (CMake) and third party documentation, don't write custom wrappers (build.sh)
