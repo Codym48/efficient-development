@@ -34,7 +34,7 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Resolve MR concerns efficiently
   - Developers are empowered to resolve threads about typos when they make the fix
   - Larger / open-ended / architectural concerns shall be resolved by the originator of the thread (only)
-  - Reviewers should prefer the [suggest changes](https://docs.gitlab.com/ee/user/project/merge_requests/reviews/suggestions.html) feature whenever possible to allow quicker application by the developer
+  - Reviewers should use the [suggest changes](https://docs.gitlab.com/ee/user/project/merge_requests/reviews/suggestions.html) feature whenever possible to allow quicker application by the developer
     - Or just push a commit that fixes that spelling mistake if you have a good relationship with the developer
       - But don't push big changes without talking to the developer
   - Once a reviewer approves, consider all threads they originated resolvable by anyone
