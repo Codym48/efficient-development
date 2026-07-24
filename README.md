@@ -21,7 +21,7 @@ Efficient development minimizes total pain and suffering across the whole softwa
   - Commit and push frequently
 - Clear and comprehensive MR descriptions are far more important than individual commit messages
   - Updating the MR description costs nothing, work on continuously improving it
-  - Present your understanding of the problem space and your solution's position within it, so the reviewer can build a mental model before looking at code
+  - Present the problem space and your solution's position within it, so the reviewer can build a mental model before looking at code
     - Focus on [why (and why not), not how](https://cbea.ms/git-commit/#why-not-how), providing context and [theory](https://pablo.rauzy.name/dev/naur1985programming.pdf) that isn't already visible in the diff
 - Do not publish or burden others with reading something generated that you haven't validated and synthesized yourself
 - Keep MRs small
