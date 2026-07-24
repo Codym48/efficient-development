@@ -29,7 +29,7 @@ Efficient development minimizes total pain and suffering across the whole softwa
 - Match existing code
   - Unless that code is broken or terrible, in which case update it everywhere, not just in your new code
 - Drive MRs to closure before opening new ones
-  - Unless you find a bug that can be spun off and completed via a smaller incremental MR sooner
+  - Unless you find a bug that you can squash via a smaller incremental MR sooner
 - Make time to review teammates' MRs on a recurring basis
 - Resolve MR concerns efficiently
   - Developers are empowered to resolve threads about typos when they make the fix
